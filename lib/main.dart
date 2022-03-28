@@ -37,6 +37,24 @@ class _StackViewState extends State<StackView> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Lock Screen'),
+        centerTitle: true,
+        leading: Icon(Icons.home),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.call),
+            color: Colors.white,
+            onPressed: () {},
+          ),
+        ],
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[Colors.green, Colors.blue],
+            ),
+          ),
+        ),
       ),
       body: Stack(
         children: <Widget>[
