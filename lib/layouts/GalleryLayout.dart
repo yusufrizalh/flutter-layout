@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_layouts/layouts/HomeLayout.dart';
-import 'package:flutter_layouts/layouts/SettingsLayout.dart';
+import 'package:flutter_layouts/layouts/tabs/Tab1.dart';
+import 'package:flutter_layouts/layouts/tabs/Tab2.dart';
+import 'package:flutter_layouts/layouts/tabs/Tab3.dart';
 
 void main() {
   runApp(GalleryLayout());
@@ -52,22 +53,22 @@ class _DisplayLayoutState extends State<DisplayLayout> {
                 ),
                 tabs: [
                   Tab(
-                    text: 'Gallery 1',
+                    text: 'Tab 1',
                   ),
                   Tab(
-                    text: 'Gallery 2',
+                    text: 'Tab 2',
                   ),
                   Tab(
-                    text: 'Gallery 3',
+                    text: 'Tab 3',
                   ),
                 ],
               ),
               Expanded(
                 child: TabBarView(
                   children: [
-                    HomeLayout(),
-                    SettingsLayout(),
-                    HomeLayout(),
+                    Tab1(),
+                    Tab2(),
+                    Tab3(),
                   ],
                 ),
               ),
