@@ -44,11 +44,14 @@ class _DisplayLayoutState extends State<DisplayLayout> {
                 indicatorColor: Colors.red,
                 labelPadding: EdgeInsets.all(2.0),
                 labelStyle: TextStyle(
-                  fontSize: 18.0,
+                  color: Colors.red,
+                  fontSize: 14.0,
                   fontWeight: FontWeight.w700,
                 ),
+                unselectedLabelColor: Colors.black,
                 unselectedLabelStyle: TextStyle(
-                  fontSize: 18.0,
+                  color: Colors.black,
+                  fontSize: 12.0,
                   fontWeight: FontWeight.w400,
                 ),
                 tabs: [
