@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_layouts/layouts/HomeLayout.dart';
+import 'package:flutter_layouts/layouts/SettingsLayout.dart';
 
 void main() {
   runApp(GalleryLayout());
@@ -31,17 +33,46 @@ class _DisplayLayoutState extends State<DisplayLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Gallery Layout',
-              style: TextStyle(
-                fontSize: 32.0,
-                fontWeight: FontWeight.bold,
+        child: DefaultTabController(
+          length: 3,
+          initialIndex: 0,
+          child: Column(
+            children: <Widget>[
+              TabBar(
+                labelColor: Colors.black45,
+                indicatorColor: Colors.red,
+                labelPadding: EdgeInsets.all(2.0),
+                labelStyle: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w700,
+                ),
+                unselectedLabelStyle: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w400,
+                ),
+                tabs: [
+                  Tab(
+                    text: 'Gallery 1',
+                  ),
+                  Tab(
+                    text: 'Gallery 2',
+                  ),
+                  Tab(
+                    text: 'Gallery 3',
+                  ),
+                ],
               ),
-            ),
-          ],
+              Expanded(
+                child: TabBarView(
+                  children: [
+                    HomeLayout(),
+                    SettingsLayout(),
+                    HomeLayout(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
