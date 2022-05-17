@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables, file_names, unused_field, unused_element
 
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 void main() {
